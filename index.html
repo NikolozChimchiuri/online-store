@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketly — ონლაინ მაღაზია" />
+  <title>Marketly — ონლაინ მაღაზია</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">უფასო მიწოდება თბილისში 100 ₾-ზე მეტი შეკვეთისას</div>
+  <header class="header">
+    <a class="brand" href="#">market<span>ly</span></a>
+    <nav><a href="#catalog">კატალოგი</a><a href="#about">ჩვენ შესახებ</a><a href="#contact">კონტაქტი</a></nav>
+    <div class="actions"><label class="search"><span>⌕</span><input id="search" placeholder="მოძებნე პროდუქტი" /></label><button id="cartButton" class="cart" aria-label="კალათა">🛍️ <b id="cartCount">0</b></button></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">ახალი კოლექცია</p><h1>ყველაფერი,<br><em>რაც გჭირდება.</em></h1><p>აღმოაჩინე ხარისხიანი ნივთები ყოველდღიური ცხოვრებისთვის.</p><a class="button" href="#catalog">შოპინგის დაწყება <span>→</span></a></div>
+      <div class="hero-art"><div class="blob"></div><div class="card-float">✦<br><small>მხოლოდ დღეს</small><b>−20%</b></div><div class="hero-emoji">🛋️</div></div>
+    </section>
+    <section class="categories" aria-label="კატეგორიები"><button class="category active" data-category="ყველა">✦ <span>ყველა</span></button><button class="category" data-category="ტექნიკა">⌁ <span>ტექნიკა</span></button><button class="category" data-category="სახლისთვის">⌂ <span>სახლისთვის</span></button><button class="category" data-category="აქსესუარები">◌ <span>აქსესუარები</span></button><button class="category" data-category="სილამაზე">✿ <span>სილამაზე</span></button></section>
+    <section id="catalog" class="catalog"><div class="section-head"><div><p class="eyebrow">რჩეული პროდუქცია</p><h2>პოპულარული ახლა</h2></div><span id="productCount"></span></div><div id="products" class="product-grid"></div></section>
+    <section id="about" class="benefits"><article><i>✓</i><div><b>ხარისხი გარანტირებულია</b><p>ფრთხილად შერჩეული პროდუქცია</p></div></article><article><i>↗</i><div><b>სწრაფი მიწოდება</b><p>თბილისში 1–2 სამუშაო დღეში</p></div></article><article><i>◒</i><div><b>უსაფრთხო გადახდა</b><p>თქვენი მონაცემები დაცულია</p></div></article></section>
+  </main>
+  <footer id="contact"><a class="brand" href="#">market<span>ly</span></a><p>შენი ყოველდღიური ონლაინ მაღაზია.</p><p>© 2026 Marketly</p></footer>
+  <aside id="cartPanel" class="cart-panel" aria-hidden="true"><div class="cart-header"><h2>შენი კალათა</h2><button id="closeCart" aria-label="დახურვა">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-footer"><div><span>ჯამი</span><b id="cartTotal">0.00 ₾</b></div><button id="checkout" class="button">შეკვეთის გაფორმება →</button></div></aside><div id="overlay" class="overlay"></div>
+  <dialog id="checkoutDialog"><button class="dialog-close" onclick="checkoutDialog.close()">×</button><p class="eyebrow">შეკვეთა</p><h2>მიწოდების დეტალები</h2><form id="orderForm"><input required placeholder="სახელი და გვარი" /><input required type="tel" placeholder="ტელეფონის ნომერი" /><input required placeholder="მისამართი" /><select required><option value="">გადახდის მეთოდი</option><option>ბარათით გადახდა</option><option>კურიერთან ნაღდი ანგარიშსწორება</option></select><button class="button">შეკვეთის დადასტურება →</button></form></dialog>
+  <template id="productTemplate"><article class="product"><div class="product-image"><span class="tag"></span><span class="product-emoji"></span><button class="wish" aria-label="რჩეულებში დამატება">♡</button></div><div class="product-info"><p class="product-category"></p><h3></h3><div><b class="price"></b><button class="add">კალათაში +</button></div></div></article></template>
+  <script src="app.js"></script>
+</body>
+</html>
